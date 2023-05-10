@@ -9,6 +9,7 @@ pipeline {
             steps {
                 echo 'Running build automation'
                 sh './gradlew build --no-daemon'
+                //sh script: '/opt/maven/bin/mvn compile'
                 archiveArtifacts artifacts: 'dist/trainSchedule.zip'
             }
         }
